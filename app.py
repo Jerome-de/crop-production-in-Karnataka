@@ -4,19 +4,19 @@ import pandas as pd
 import joblib
 
 # === Load trained model and preprocessing tools ===
-model = joblib.load('/content/drive/MyDrive/class.pkl')
+model = joblib.load('class.pkl')
 
 # Load encoders for categorical features
-le_location = joblib.load('/content/drive/MyDrive/Location_encoder.pkl')
-le_soil = joblib.load('/content/drive/MyDrive/Soil type_encoder.pkl')
-le_irrigation = joblib.load('/content/drive/MyDrive/Irrigation_encoder.pkl')
-le_crops = joblib.load('/content/drive/MyDrive/Crops_encoder.pkl')
+le_location = joblib.load('Location_encoder.pkl')
+le_soil = joblib.load('Soil type_encoder.pkl')
+le_irrigation = joblib.load('Irrigation_encoder.pkl')
+le_crops = joblib.load('Crops_encoder.pkl')
 
 # Load scaler for numeric features
-scaler = joblib.load('/content/drive/MyDrive/numeric_scaler.pkl')
+scaler = joblib.load('numeric_scaler.pkl')
 
 # Load target encoder to decode predicted season
-le_target = joblib.load('/content/drive/MyDrive/target_encoder.pkl')
+le_target = joblib.load('target_encoder.pkl')
 
 # === Streamlit app ===
 st.title('🌾 Season Classification')
